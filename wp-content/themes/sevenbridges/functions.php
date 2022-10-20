@@ -73,7 +73,9 @@ add_action( 'after_setup_theme', 'seven_bridges_theme_setup' );
  */
 
   require get_template_directory() . '/inc/post-type/testimonial.php';
-//  require get_template_directory() . '/inc/post-type/awards.php';
+  require get_template_directory() . '/inc/post-type/case-studies.php';
+  require get_template_directory() . '/inc/post-type/publication.php';
+  require get_template_directory() . '/inc/post-type/solutions.php';
 //  require get_template_directory() . '/inc/post-type/resources.php';
   require get_template_directory() . '/inc/post-type/leadership.php';
   require get_template_directory() . '/inc/post-type/insights.php';
@@ -83,7 +85,8 @@ add_action( 'after_setup_theme', 'seven_bridges_theme_setup' );
 
   require get_template_directory() . '/inc/taxonomy/blog.php';
 //  require get_template_directory() . '/inc/taxonomy/event.php';
-//  require get_template_directory() . '/inc/taxonomy/media.php';
+  require get_template_directory() . '/inc/taxonomy/solution.php';
+  require get_template_directory() . '/inc/taxonomy/publication.php';
 //  require get_template_directory() . '/inc/taxonomy/awards-year.php';
 //  require get_template_directory() . '/inc/taxonomy/resources-download.php';
 
@@ -394,4 +397,16 @@ function sevenBridges_widgets_init()
 //  endif;
 
 
+// add_filter('post_type_link', 'solutions_permalink_structure', 10, 4);
+// function solutions_permalink_structure($post_link, $post, $leavename, $sample) {
+//     if (false !== strpos($post_link, '%solutions%')) {
+//         $solutions_type_term = get_the_terms($post->ID, 'solutions');
+//         if (!empty($solutions_type_term))
+//             $post_link = str_replace('%solutions%', array_pop($solutions_type_term)->
+//             slug, $post_link);
+//         else
+//             $post_link = str_replace('%solutions%', 'uncategorized', $post_link);
+//     }
+//     return $post_link;
+// }
 

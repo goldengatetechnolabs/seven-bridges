@@ -1,12 +1,12 @@
 <?php 
-// Register Media Post Type
-function media_post_type() {
+// Register Publication Post Type
+function publication_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Media', 'Post Type General Name', 'sevenBridges' ),
-		'singular_name'         => _x( 'Media', 'Post Type Singular Name', 'sevenBridges' ),
-		'menu_name'             => __( 'Media', 'sevenBridges' ),
-		'name_admin_bar'        => __( 'Media', 'sevenBridges' ),
+		'name'                  => _x( 'Publications', 'Post Type General Name', 'sevenBridges' ),
+		'singular_name'         => _x( 'Publication', 'Post Type Singular Name', 'sevenBridges' ),
+		'menu_name'             => __( 'Publications', 'sevenBridges' ),
+		'name_admin_bar'        => __( 'Publication', 'sevenBridges' ),
 		'archives'              => __( 'Item Archives', 'sevenBridges' ),
 		'attributes'            => __( 'Item Attributes', 'sevenBridges' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'sevenBridges' ),
@@ -32,16 +32,16 @@ function media_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'sevenBridges' ),
 	);
 	$args = array(
-		'label'                 => __( 'Media', 'sevenBridges' ),
-		'description'           => __( 'Media Description', 'sevenBridges' ),
+		'label'                 => __( 'Publication', 'sevenBridges' ),
+		'description'           => __( 'Publication Description', 'sevenBridges' ),
 		'labels'                => $labels,
 		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'author', 'comments', 'trackbacks', 'page-attributes', 'post-formats', 'custom-fields'),
-		'taxonomies'            => array('medias', ),
+		'taxonomies'            => array('publication', ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_icon'   			=> 'dashicons-media-interactive',
+		'menu_icon'   			=> 'dashicons-format-quote',
 		'menu_position'         => 3,
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
@@ -51,7 +51,7 @@ function media_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'media', $args );
+	register_post_type( 'publications', $args );
 
 }
-add_action( 'init', 'media_post_type', 0 );
+add_action( 'init', 'publication_post_type', 0 );
