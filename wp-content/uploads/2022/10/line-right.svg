@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="520.128" height="229.369" viewBox="0 0 520.128 229.369">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.502" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.973" y1="0.255" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.601" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2721" data-name="Rectangle 2721" width="490.128" height="194.369" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_2722" data-name="Rectangle 2722" width="520.128" height="229.369" fill="url(#linear-gradient-2)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-5" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.493" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_5284" data-name="Group 5284" opacity="0.122">
+    <g id="Group_5278" data-name="Group 5278" transform="translate(10 20)" opacity="0.332" clip-path="url(#clip-path)">
+      <path id="Path_2328" data-name="Path 2328" d="M0,194.369H15V132.456A53.2,53.2,0,0,1,68.135,79.321H421.993a68.212,68.212,0,0,0,68.135-68.135V0h-15V11.186a53.2,53.2,0,0,1-53.135,53.135H68.135A68.212,68.212,0,0,0,0,132.456Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_5280" data-name="Group 5280" transform="translate(0 0)" opacity="0.2" clip-path="url(#clip-path-2)">
+      <path id="Path_2328-2" data-name="Path 2328" d="M0,194.369H15V132.456A53.2,53.2,0,0,1,68.135,79.321H421.993a68.212,68.212,0,0,0,68.135-68.135V0h-15V11.186a53.2,53.2,0,0,1-53.135,53.135H68.135A68.212,68.212,0,0,0,0,132.456Z" transform="translate(10 20)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_2328_-_Outline" data-name="Path 2328 - Outline" d="M-7.5,201.869h30V132.456A45.687,45.687,0,0,1,68.135,86.821H421.993a75.721,75.721,0,0,0,75.635-75.635V-7.5h-30V11.186a45.687,45.687,0,0,1-45.635,45.635H68.135A75.721,75.721,0,0,0-7.5,132.456ZM482.628,11.186a60.7,60.7,0,0,1-60.635,60.635H68.135A60.7,60.7,0,0,0,7.5,132.456,60.7,60.7,0,0,1,68.135,71.821H421.993A60.7,60.7,0,0,0,482.628,11.186Z" transform="translate(10 20)" opacity="0.721" fill="url(#linear-gradient-5)"/>
+    </g>
+  </g>
+</svg>

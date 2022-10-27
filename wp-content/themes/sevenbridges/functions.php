@@ -30,43 +30,43 @@ function seven_bridges_theme_setup() {
 add_action( 'after_setup_theme', 'seven_bridges_theme_setup' );
 
 //Excerpt Length
-// function custom_excerpt_length( $length ) {
-// 	return 20;
-// }
-// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /**
  * Enqueue scripts and styles.
  */
-// function sevenBridges_scripts()
+ function sevenBridges_scripts()
 
-// {
+ {
     
-// 	wp_enqueue_style('sevenBridges-style', get_template_directory_uri() . "/asset/css/style.css",  false, '1.1', 'all');
-// 	wp_enqueue_style('sevenBridges-custom', get_template_directory_uri() . "/asset/css/custom.css", false, '1.1', 'all');
+ 	wp_enqueue_style('sevenBridges-style', get_template_directory_uri() . "/asset/css/style.css",  false, '1.1', 'all');
+ 	wp_enqueue_style('sevenBridges-custom', get_template_directory_uri() . "/asset/css/custom.css", false, '1.1', 'all');
 
 	 
 
 
 
-// 	wp_enqueue_script('sevenBridges-jsbundle', get_template_directory_uri() . '/asset/js/jsbundle.min.js', array(),"1.1", true);
-// 	wp_enqueue_script('sevenBridges-main', get_template_directory_uri() . '/asset/js/main.js', array("jquery"), "1.1", true);
-// 	if (is_singular() && comments_open() && get_option('thread_comments')) {
+ 	wp_enqueue_script('sevenBridges-jsbundle', get_template_directory_uri() . '/asset/js/jsbundle.min.js', array(),"1.1", true);
+ 	wp_enqueue_script('sevenBridges-main', get_template_directory_uri() . '/asset/js/main.js', array("jquery"), "1.1", true);
+ 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 
-// 		wp_enqueue_script('comment-reply');
+ 		wp_enqueue_script('comment-reply');
 
-// 	}
+ 	}
 
-// }
+ }
 
-// add_action('wp_enqueue_scripts', 'sevenBridges_scripts');
+ add_action('wp_enqueue_scripts', 'sevenBridges_scripts');
 
   //manifest file
-//   add_action( 'wp_head', 'inc_manifest_link' );
-//   // Creates the link tag
-//   function inc_manifest_link() {   
-// 		  echo '<link rel="manifest" href="'.get_template_directory_uri().'/asset/images/favicon/manifest.json">';
-//   }
+  add_action( 'wp_head', 'inc_manifest_link' );
+  // Creates the link tag
+  function inc_manifest_link() {   
+		  echo '<link rel="manifest" href="'.get_template_directory_uri().'/asset/images/favicon/manifest.json">';
+  }
 
 /**
  * custom post types and Taxanomy
