@@ -265,35 +265,18 @@
 			</div>
 		</div>
 		<div class="row g-4 justify-content-center align-items-center">
-			<div class="col-md-4 wow fadeInUp" data-wow-delay=".1s">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t01.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 wow fadeInUp" data-wow-delay=".3s">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t02.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md-4 wow fadeInUp" data-wow-delay=".5s">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t03.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
+        <?php $the_query = new WP_Query(array('post_type' => 'case-studies', 'post_status'=>'publish', 'posts_per_page'=>3));
+			if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <div class="col-md-4 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="testimonials-block">
+                        <div class="testimonials-img"><img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid"></div>
+                        <div class="testimonials-details">
+                            <p><?php echo get_the_excerpt(); ?></p>
+                            <a href="<?php the_permalink(); ?>" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            <?php endwhile; wp_reset_postdata(); endif; ?>
 		</div>
 	</div>
 </section>

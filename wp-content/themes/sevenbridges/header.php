@@ -46,6 +46,16 @@
 			</div>
 
 			<div class="main-menu navbar-collapse collapse  align-items-center justify-content-lg-end" id="navbarNavDropdown">
+			<?php
+				// wp_nav_menu(array(
+				// 	'theme_location' => 'mega_menu',
+				// 	'depth' => 2,
+				// 	'container' => "",
+				// 	"container_class" => "",
+				// 	'menu_class'  => 'navbar-nav align-items-center',
+				// 	'walker'  => new WP_Bootstrap_Mega_Navwalker()
+				// ));
+			?>
 				<ul class="navbar-nav align-items-center">
 					<li class="nav-item dropdown mega-drop"> 
 						<a href="#" class="nav-link dropdown-toggle" role="button" id="d1" data-bs-toggle="dropdown" aria-expanded="false">Platform</a> 
@@ -242,8 +252,9 @@
                 			</ul>
 	                    </div>
 					</li>
-
-					<li class="nav-item ps-xxl-4"><a href="" class="btn btn1">Contact Us</a> </li>
+				</ul>
+				<ul class="navbar-nav align-items-center">
+				<li class="nav-item ps-xxl-4"><a href="" class="btn btn1">Contact Us</a> </li>
 				</ul>
 			</div>
 		</nav>

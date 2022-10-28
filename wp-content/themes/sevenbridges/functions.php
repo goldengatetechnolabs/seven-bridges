@@ -1,5 +1,7 @@
 <?php
-//require_once get_template_directory() . '/inc/custom-shortcode.php';
+require_once get_template_directory() . '/inc/custom-shortcode.php';
+require_once "inc/wp-bootstrap-mega-navwalker.php";
+
 // Register Theme Features
 function seven_bridges_theme_setup() {
 	add_theme_support( 'title-tag' );
@@ -31,7 +33,7 @@ add_action( 'after_setup_theme', 'seven_bridges_theme_setup' );
 
 //Excerpt Length
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 13;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -203,8 +205,7 @@ function sevenBridges_widgets_init()
         )
     );
 
-	
-	
+
 	register_sidebar(
         array(
             'name'          => esc_html__('Footer Links', 'sevenBridges'),
@@ -241,9 +242,55 @@ function sevenBridges_widgets_init()
         )
     );
 
+    register_nav_menus( array(
+
+        'mega_menu' => __( 'Mega Menu', 'sevenBridges' ),
+    
+    ) );
+
 }
 
  add_action('widgets_init', 'sevenBridges_widgets_init');
+
+ function widgets_init()
+{
+
+    $location = 'mega_menu';
+    $css_class = 'mega-menu-parent';
+    $locations = get_nav_menu_locations();
+    if ( isset( $locations[ $location ] ) ) {
+        $menu = get_term( $locations[ $location ], 'nav_menu' );
+        if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
+            foreach ( $items as $item ) {
+                if ( in_array( $css_class, $item->classes ) ) {
+                    register_sidebar( array(
+                        'id'   => 'mega-menu-item-col-1' . $item->ID,
+                        'description' => 'Mega Menu items',
+                        'name' => $item->title . ' - Mega Menu Column 1',
+                         
+						
+                    ));
+                    register_sidebar( array(
+                        'id'   => 'mega-menu-item-col-2' . $item->ID,
+                        'description' => 'Mega Menu items',
+                        'name' => $item->title . ' - Mega Menu Column 2',
+						
+						
+                    ));
+                    register_sidebar( array(
+                        'id'   => 'mega-menu-item-col-3' . $item->ID,
+                        'description' => 'Mega Menu items',
+                        'name' => $item->title . ' - Mega Menu Column 3',
+						 
+						
+                    ));
+                }
+            }
+        }
+    }
+    
+}
+add_action('widgets_init', 'widgets_init');
 
 // add_action('init', 'custom_taxonomy_flush_rewrite');
 // function custom_taxonomy_flush_rewrite() {
@@ -261,15 +308,7 @@ function sevenBridges_widgets_init()
 //      return $atts;
 // }
 
-/**
- * Register Custom Navigation Walker
- */
-// function register_navwalker(){
 
-// 	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
-// }
-// add_action( 'after_setup_theme', 'register_navwalker' );
 
 // register_nav_menus( array(
 
