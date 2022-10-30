@@ -73,11 +73,12 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 /**
  * custom post types and Taxanomy
  */
-
+  require get_template_directory() . '/inc/post-type/by-challenge.php';
+  require get_template_directory() . '/inc/post-type/by-segment.php';
   require get_template_directory() . '/inc/post-type/testimonial.php';
   require get_template_directory() . '/inc/post-type/case-studies.php';
   require get_template_directory() . '/inc/post-type/publication.php';
-  require get_template_directory() . '/inc/post-type/solutions.php';
+  //require get_template_directory() . '/inc/post-type/solutions.php';
 //  require get_template_directory() . '/inc/post-type/resources.php';
   require get_template_directory() . '/inc/post-type/leadership.php';
   require get_template_directory() . '/inc/post-type/insights.php';
@@ -87,7 +88,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
   require get_template_directory() . '/inc/taxonomy/blog.php';
 //  require get_template_directory() . '/inc/taxonomy/event.php';
-  require get_template_directory() . '/inc/taxonomy/solution.php';
+  //require get_template_directory() . '/inc/taxonomy/solution.php';
   require get_template_directory() . '/inc/taxonomy/publication.php';
 //  require get_template_directory() . '/inc/taxonomy/awards-year.php';
 //  require get_template_directory() . '/inc/taxonomy/resources-download.php';

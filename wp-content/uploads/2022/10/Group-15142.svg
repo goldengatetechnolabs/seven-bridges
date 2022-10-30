@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="608" height="250.831" viewBox="0 0 608 250.831">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.211" y1="14.134" x2="1" y2="-14.887" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#184c74"/>
+      <stop offset="0.448" stop-color="#338da6"/>
+      <stop offset="1" stop-color="#eb404d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.779" y1="1.485" x2="1.222" y2="0.336" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_32270" data-name="Rectangle 32270" width="134.803" height="6.74" transform="translate(0)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_15142" data-name="Group 15142" transform="translate(-61 -1650.669)">
+    <rect id="Rectangle_3926" data-name="Rectangle 3926" width="608" height="224" rx="56" transform="translate(61 1666)" fill="#eaeaea"/>
+    <g id="Group_11759" data-name="Group 11759" transform="translate(272.999 1651.169)">
+      <g id="Group_11754" data-name="Group 11754" transform="translate(28.31 214.461)">
+        <g id="Group_11753" data-name="Group 11753" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <rect id="Rectangle_32269" data-name="Rectangle 32269" width="134.803" height="6.74" transform="translate(0)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <path id="Union_6" data-name="Union 6" d="M19.212,249.831A19.235,19.235,0,0,1,0,230.611V48.048A19.235,19.235,0,0,1,19.212,28.829h9.615V24.02a9.616,9.616,0,0,1,9.6-9.61H74.1a23.979,23.979,0,0,1,43.974,0h35.665a9.62,9.62,0,0,1,9.61,9.61v4.808h9.613A19.251,19.251,0,0,1,191.422,42.7V235.962a19.251,19.251,0,0,1-18.462,13.869ZM9.6,48.048V230.611a9.626,9.626,0,0,0,9.61,9.617H172.961a9.621,9.621,0,0,0,9.61-9.617V48.048a9.615,9.615,0,0,0-9.61-9.609H120.109v9.609h43.24a9.616,9.616,0,0,1,9.613,9.6V221.009a9.616,9.616,0,0,1-9.613,9.6H28.827a9.615,9.615,0,0,1-9.615-9.6V57.651a9.615,9.615,0,0,1,9.615-9.6H72.069V38.439H19.212A9.62,9.62,0,0,0,9.6,48.048ZM28.827,206.59H163.348V57.651h-43.24a9.626,9.626,0,0,1-9.61,9.617H81.671a9.619,9.619,0,0,1-9.6-9.617H28.827ZM81.671,24.02v33.63h28.838L110.5,24.02a14.414,14.414,0,0,0-28.827,0Zm38.437,4.808h33.63V24.02h-33.63Zm-81.677,0H72.069V24.02H38.432Zm81.677,141.314-10.189,10.19-6.79-6.793,10.187-10.189-10.187-10.19,6.79-6.793,10.189,10.189L130.3,146.368l6.79,6.793L126.9,163.35l10.187,10.189-6.79,6.793Zm-72.254,7.908v-8.7H71.777v8.7Zm0-19.577v-8.7H80.481v8.7ZM112.1,120.4,98.7,106.985l6.793-6.793L118.9,113.6l21.379-21.36,6.8,6.793L125.714,120.4a9.628,9.628,0,0,1-13.609,0Zm-64.25-1.084v-8.7H76.132v8.7Zm0-17.4V91.043H87.008v10.873Z" transform="translate(0.001)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>

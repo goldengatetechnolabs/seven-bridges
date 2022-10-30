@@ -1,4 +1,5 @@
 <?php get_header(); ?>
 
-test
+segment
+
 <?php get_footer(); ?>

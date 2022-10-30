@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="516" height="255.259" viewBox="0 0 516 255.259">
+  <defs>
+    <linearGradient id="linear-gradient" y1="1.085" x2="0.961" y2="0.076" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#184c74"/>
+      <stop offset="0.448" stop-color="#338da6"/>
+      <stop offset="1" stop-color="#eb404d"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_32363" data-name="Rectangle 32363" width="187.19" height="255.258" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_15137" data-name="Group 15137" transform="translate(-743 -1968.871)">
+    <rect id="Rectangle_3927" data-name="Rectangle 3927" width="516" height="224" rx="54" transform="translate(743 1986)" fill="#eaeaea"/>
+    <g id="Group_11898" data-name="Group 11898" transform="translate(909 1968.871)">
+      <g id="Group_11897" data-name="Group 11897" clip-path="url(#clip-path)">
+        <path id="Path_9610" data-name="Path 9610" d="M174.644,97.849H148.9V55.306a55.306,55.306,0,1,0-110.612,0V97.849H12.547A12.56,12.56,0,0,0,0,110.395V225.458c0,.007,0,.013,0,.02s0,.014,0,.021v17.214a12.56,12.56,0,0,0,12.545,12.546h162.1a12.56,12.56,0,0,0,12.545-12.546V110.395a12.56,12.56,0,0,0-12.545-12.545M46.8,55.306a46.8,46.8,0,0,1,93.595,0V97.849h-8.508V55.306a38.289,38.289,0,0,0-76.577,0V97.849H46.8Zm76.578,0V97.849H63.814V55.306a29.78,29.78,0,0,1,59.561,0m55.306,187.406a4.043,4.043,0,0,1-4.037,4.037H12.547a4.043,4.043,0,0,1-4.037-4.037v-12.98H178.682Zm0-21.489H8.509V110.395a4.043,4.043,0,0,1,4.037-4.037h162.1a4.043,4.043,0,0,1,4.037,4.037Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+        <path id="Path_9611" data-name="Path 9611" d="M171.717,278.428a21.272,21.272,0,1,0-27.7,0l-7.3,29.682a4.254,4.254,0,0,0,4.131,5.271h34.035a4.254,4.254,0,0,0,4.131-5.271Zm-8.938-.715,6.679,27.16H146.281l6.68-27.16A4.265,4.265,0,0,0,151.1,273.1a12.763,12.763,0,1,1,13.546,0,4.265,4.265,0,0,0-1.864,4.616" transform="translate(-64.275 -113.428)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>
