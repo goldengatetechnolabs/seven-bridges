@@ -133,10 +133,10 @@ function sevenBridges_widgets_init()
         )
     );
 
-	register_sidebar(
+    register_sidebar(
         array(
             'name'          => esc_html__('Footer Platform Menu', 'sevenBridges'),
-            'id'            => 'footer-Platform-menu',
+            'id'            => 'footer-platform-menu',
             'description'   => '',
             'before_widget' => '',
             'after_widget'  => '',
@@ -144,6 +144,7 @@ function sevenBridges_widgets_init()
             'after_title'   => '',
         )
     );
+	
 
 	register_sidebar(
         array(

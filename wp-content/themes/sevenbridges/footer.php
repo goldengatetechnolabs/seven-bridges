@@ -26,7 +26,7 @@
 			<div class="col-md">
 				<div class="single-footer-caption mb-md-4 wow fadeInLeft" data-wow-delay=".3s">
 					<div class="footer-tittle mb-md-5">
-                    <?php if ( is_active_sidebar( 'footer-Platform-menu' ) ) { dynamic_sidebar( 'footer-Platform-menu' ); } ?>
+                    	<?php if ( is_active_sidebar( 'footer-platform-menu' ) ) { dynamic_sidebar( 'footer-platform-menu' ); } ?>
 					</div>
 				</div>
 			</div>

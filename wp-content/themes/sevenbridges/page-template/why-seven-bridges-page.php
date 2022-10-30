@@ -22,7 +22,7 @@ get_header();
                 <div class="row g-4 <?php echo ($i%2 == 1) ? "" : 'flex-md-row-reverse'; ?> justify-content-center align-items-center clearfix mb-5">
                     <div class="col-md-6 pe-md-5 wow fadeInLeft" data-wow-delay=".1s">
                         <div class="section-title">
-                            <h3 class="text-uppercase ls-5 primary-light"><?php echo get_sub_field('title'); ?>SCALABILITY</h3>
+                            <h3 class="text-uppercase ls-5 primary-light"><?php echo get_sub_field('title'); ?></h3>
                             <h4 class="mb-3"><?php echo get_sub_field('sub_title'); ?></h4>
                         </div>
                         <div class="welcome-p">
@@ -77,27 +77,6 @@ get_header();
 	</div>
 </section>
 
-<!-- CTA -->
-<!-- <section class="cta-sect bg-secondary-color text-center text-md-start text-white clearfix pt-5 pb-md-0 pb-5">
-	<div class="container">
-		<div class="row justify-content-center justify-content-center g-4">
-			<div class="col-md-11">
-				<div class="row g-4 align-items-center justify-content-center">
-					<div class="col-md-5 wow fadeInLeft" data-wow-delay=".3s">
-						<div class="cta-img"><img src="images/cta.png" class="img-fluid w-100"></div>
-					</div>
-					<div class="col-md-7 ps-md-5  wow fadeInRight" data-wow-delay=".3s">
-						<div class="section-title">
-							<h2 class="mb-3 text-white">Discover like never before with a complete bioinformatics ecosystem.</h2>
-						</div>
-
-						<a href="" class="btn m-1">Request a Demo</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
 
 <!-- CTA -->
 <?php get_template_part("template-parts/cta-section"); ?>
