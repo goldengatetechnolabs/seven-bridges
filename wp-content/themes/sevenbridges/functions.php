@@ -319,97 +319,97 @@ add_action('widgets_init', 'widgets_init');
 // ) );
 
 // Option Page
-// if ( function_exists( 'acf_add_options_page' ) ) {
+if ( function_exists( 'acf_add_options_page' ) ) {
 
-// 	acf_add_options_page( array(
-// 		'page_title'	=> 'Leadership Custom Field',
-// 		'menu_title'	=> 'Leadership Custom Field',
-// 		'menu_slug' 	=> 'Leadership Custom Field',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false,
-// 		'parent_slug'    => 'edit.php?post_type=leadership',
-// 	));
+	acf_add_options_page( array(
+		'page_title'	=> 'Leadership Custom Field',
+		'menu_title'	=> 'Leadership Custom Field',
+		'menu_slug' 	=> 'Leadership Custom Field',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'parent_slug'    => 'edit.php?post_type=leadership',
+	));
 
-//     acf_add_options_page( array(
-// 		'page_title'	=> 'Event Custom Field',
-// 		'menu_title'	=> 'Event Custom Field',
-// 		'menu_slug' 	=> 'Event Custom Field',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false,
-// 		'parent_slug'    => 'edit.php?post_type=events',
-// 	));
+    // acf_add_options_page( array(
+	// 	'page_title'	=> 'Event Custom Field',
+	// 	'menu_title'	=> 'Event Custom Field',
+	// 	'menu_slug' 	=> 'Event Custom Field',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'parent_slug'    => 'edit.php?post_type=events',
+	// ));
 
-// 	acf_add_options_page( array(
-// 		'page_title'	=> 'Resources Custom Field',
-// 		'menu_title'	=> 'Resources Custom Field',
-// 		'menu_slug' 	=> 'Resources Custom Field',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false,
-// 		'parent_slug'    => 'edit.php?post_type=resources',
-// 	));
+	// acf_add_options_page( array(
+	// 	'page_title'	=> 'Resources Custom Field',
+	// 	'menu_title'	=> 'Resources Custom Field',
+	// 	'menu_slug' 	=> 'Resources Custom Field',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'parent_slug'    => 'edit.php?post_type=resources',
+	// ));
 
-// 	acf_add_options_page( array(
-// 		'page_title'	=> 'Insight Custom Field',
-// 		'menu_title'	=> 'Insight Custom Field',
-// 		'menu_slug' 	=> 'Insight Custom Field',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false,
-// 		'parent_slug'    => 'edit.php?post_type=insights',
-// 	));
+	// acf_add_options_page( array(
+	// 	'page_title'	=> 'Insight Custom Field',
+	// 	'menu_title'	=> 'Insight Custom Field',
+	// 	'menu_slug' 	=> 'Insight Custom Field',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'parent_slug'    => 'edit.php?post_type=insights',
+	// ));
 
-// 	acf_add_options_page( array(
-// 		'page_title'	=> 'Media Custom Field',
-// 		'menu_title'	=> 'Media Custom Field',
-// 		'menu_slug' 	=> 'Media Custom Field',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false,
-// 		'parent_slug'    => 'edit.php?post_type=media',
-// 	));
-
-
-// 	acf_add_options_page( array(
-// 		'page_title'	=> 'Blog Custom Field',
-// 		'menu_title'	=> 'Blog Custom Field',
-// 		'menu_slug' 	=> 'Blog Custom Field',
-// 		'capability'	=> 'edit_posts',
-// 		'redirect'		=> false,
-// 		'parent_slug'    => 'edit.php?post_type=blogs',
-// 	));
-
-// }
-// add_action('acf/init', 'my_acf_op_init');
+	// acf_add_options_page( array(
+	// 	'page_title'	=> 'Media Custom Field',
+	// 	'menu_title'	=> 'Media Custom Field',
+	// 	'menu_slug' 	=> 'Media Custom Field',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'parent_slug'    => 'edit.php?post_type=media',
+	// ));
 
 
+	// acf_add_options_page( array(
+	// 	'page_title'	=> 'Blog Custom Field',
+	// 	'menu_title'	=> 'Blog Custom Field',
+	// 	'menu_slug' 	=> 'Blog Custom Field',
+	// 	'capability'	=> 'edit_posts',
+	// 	'redirect'		=> false,
+	// 	'parent_slug'    => 'edit.php?post_type=blogs',
+	// ));
+
+}
+add_action('acf/init', 'my_acf_op_init');
 
 
 
-// function my_acf_op_init() {
 
-//     // Check function exists.
-//     if( function_exists('acf_add_options_page') ) {
 
-//         // Register options page.
-//         $option_page = acf_add_options_page(array(
-//             'page_title'    => __('Theme General Settings'),
-//             'menu_title'    => __('Theme Settings'),
-//             'menu_slug'     => 'theme-general-settings',
-//             'capability'    => 'edit_posts',
-//             'redirect'      => false
-//         ));
-//         acf_add_options_sub_page(array(
-//             'page_title' 	=> 'Theme Header Settings',
-//             'menu_title'	=> 'Header',
-//             'parent_slug'	=> 'theme-general-settings',
-//         ));
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Theme General Settings'),
+            'menu_title'    => __('Theme Settings'),
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+        acf_add_options_sub_page(array(
+            'page_title' 	=> 'Theme Header Settings',
+            'menu_title'	=> 'Header',
+            'parent_slug'	=> 'theme-general-settings',
+        ));
         
-//         acf_add_options_sub_page(array(
-//             'page_title' 	=> 'Theme Footer Settings',
-//             'menu_title'	=> 'Footer',
-//             'parent_slug'	=> 'theme-general-settings',
-//         ));
+        acf_add_options_sub_page(array(
+            'page_title' 	=> 'Theme Footer Settings',
+            'menu_title'	=> 'Footer',
+            'parent_slug'	=> 'theme-general-settings',
+        ));
 		
-//     }
-// }
+    }
+}
 
 //search 
 // function template_chooser( $template ){
