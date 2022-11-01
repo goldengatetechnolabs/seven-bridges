@@ -14,6 +14,22 @@
 	<meta name="theme-color" content="#ffffff">
 	<!-- Stylesheet -->
 	<?php wp_head(); ?>
+	<script type="text/javascript">
+		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			if (event.detail.contactFormId == "5") {
+				location = '<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2022/11/GRAF-Brochure.pdf';
+			}
+			if (event.detail.contactFormId == "1319") {
+				location = '<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2022/11/GRAF-Brochure.pdf';
+			}
+			if (event.detail.contactFormId == "1326") {
+				location = '<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2022/11/GRAF-Brochure.pdf';
+			}
+			if (event.detail.contactFormId == "1333") {
+				location = '<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2022/11/GRAF-Brochure.pdf';
+			}
+		}, false );
+	</script>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
