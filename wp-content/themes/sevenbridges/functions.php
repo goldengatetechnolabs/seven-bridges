@@ -348,33 +348,33 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 	// 	'parent_slug'    => 'edit.php?post_type=resources',
 	// ));
 
-	// acf_add_options_page( array(
-	// 	'page_title'	=> 'Insight Custom Field',
-	// 	'menu_title'	=> 'Insight Custom Field',
-	// 	'menu_slug' 	=> 'Insight Custom Field',
-	// 	'capability'	=> 'edit_posts',
-	// 	'redirect'		=> false,
-	// 	'parent_slug'    => 'edit.php?post_type=insights',
-	// ));
+	acf_add_options_page( array(
+		'page_title'	=> 'Insight Custom Field',
+		'menu_title'	=> 'Insight Custom Field',
+		'menu_slug' 	=> 'Insight Custom Field',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'parent_slug'    => 'edit.php?post_type=insights',
+	));
 
-	// acf_add_options_page( array(
-	// 	'page_title'	=> 'Media Custom Field',
-	// 	'menu_title'	=> 'Media Custom Field',
-	// 	'menu_slug' 	=> 'Media Custom Field',
-	// 	'capability'	=> 'edit_posts',
-	// 	'redirect'		=> false,
-	// 	'parent_slug'    => 'edit.php?post_type=media',
-	// ));
+	acf_add_options_page( array(
+		'page_title'	=> 'Publication Custom Field',
+		'menu_title'	=> 'Publication Custom Field',
+		'menu_slug' 	=> 'Publication Custom Field',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'parent_slug'    => 'edit.php?post_type=publications',
+	));
 
 
-	// acf_add_options_page( array(
-	// 	'page_title'	=> 'Blog Custom Field',
-	// 	'menu_title'	=> 'Blog Custom Field',
-	// 	'menu_slug' 	=> 'Blog Custom Field',
-	// 	'capability'	=> 'edit_posts',
-	// 	'redirect'		=> false,
-	// 	'parent_slug'    => 'edit.php?post_type=blogs',
-	// ));
+	acf_add_options_page( array(
+		'page_title'	=> 'Blog Custom Field',
+		'menu_title'	=> 'Blog Custom Field',
+		'menu_slug' 	=> 'Blog Custom Field',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'parent_slug'    => 'edit.php?post_type=blogs',
+	));
 
 }
 add_action('acf/init', 'my_acf_op_init');
@@ -423,31 +423,18 @@ function my_acf_op_init() {
 // add_filter( 'template_include', 'template_chooser' );
 
 //Pagination
-// if ( ! function_exists( 'post_pagination' ) ) :
-// 	function post_pagination() {
-// 	  global $wp_query;
-// 	  $pager = 999999999; // need an unlikely integer
+if ( ! function_exists( 'post_pagination' ) ) :
+	function post_pagination() {
+	  global $wp_query;
+	  $pager = 999999999; // need an unlikely integer
   
-// 		 echo paginate_links( array(
-// 			  'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
-// 			  'format' => '?paged=%#%',
-// 			  'current' => max( 1, get_query_var('paged') ),
-// 			  'total' => $wp_query->max_num_pages
-// 		 ) );
-// 	}
-//  endif;
+		 echo paginate_links( array(
+			  'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+			  'format' => '?paged=%#%',
+			  'current' => max( 1, get_query_var('paged') ),
+			  'total' => $wp_query->max_num_pages
+		 ) );
+	}
+ endif;
 
-
-// add_filter('post_type_link', 'solutions_permalink_structure', 10, 4);
-// function solutions_permalink_structure($post_link, $post, $leavename, $sample) {
-//     if (false !== strpos($post_link, '%solutions%')) {
-//         $solutions_type_term = get_the_terms($post->ID, 'solutions');
-//         if (!empty($solutions_type_term))
-//             $post_link = str_replace('%solutions%', array_pop($solutions_type_term)->
-//             slug, $post_link);
-//         else
-//             $post_link = str_replace('%solutions%', 'uncategorized', $post_link);
-//     }
-//     return $post_link;
-// }
 
