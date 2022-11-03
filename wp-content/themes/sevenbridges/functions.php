@@ -79,11 +79,13 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
   require get_template_directory() . '/inc/post-type/case-studies.php';
   require get_template_directory() . '/inc/post-type/publication.php';
   //require get_template_directory() . '/inc/post-type/solutions.php';
-//  require get_template_directory() . '/inc/post-type/resources.php';
+  require get_template_directory() . '/inc/post-type/press.php';
   require get_template_directory() . '/inc/post-type/leadership.php';
   require get_template_directory() . '/inc/post-type/insights.php';
   require get_template_directory() . '/inc/post-type/blog.php';
   require get_template_directory() . '/inc/post-type/in-the-news.php';
+  require get_template_directory() . '/inc/post-type/release-notes.php';
+  require get_template_directory() . '/inc/post-type/white-papers.php';
 //  require get_template_directory() . '/inc/post-type/event.php';
 
   require get_template_directory() . '/inc/taxonomy/blog.php';
@@ -91,7 +93,10 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
   //require get_template_directory() . '/inc/taxonomy/solution.php';
   require get_template_directory() . '/inc/taxonomy/publication.php';
 //  require get_template_directory() . '/inc/taxonomy/awards-year.php';
-//  require get_template_directory() . '/inc/taxonomy/resources-download.php';
+  require get_template_directory() . '/inc/taxonomy/in-the-news.php';
+  require get_template_directory() . '/inc/taxonomy/press-releases.php';
+  require get_template_directory() . '/inc/taxonomy/release-note.php';
+
 
 
 
@@ -294,13 +299,6 @@ function sevenBridges_widgets_init()
 }
 add_action('widgets_init', 'widgets_init');
 
-// add_action('init', 'custom_taxonomy_flush_rewrite');
-// function custom_taxonomy_flush_rewrite() {
-//     global $wp_rewrite;
-//     $wp_rewrite->flush_rules();
-// }
-
-
 // add_filter( 'nav_menu_link_attributes', 'bootstrap5_dropdown_fix' );
 // function bootstrap5_dropdown_fix( $atts ) {
 //      if ( array_key_exists( 'data-toggle', $atts ) ) {
@@ -339,14 +337,14 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 	// 	'parent_slug'    => 'edit.php?post_type=events',
 	// ));
 
-	// acf_add_options_page( array(
-	// 	'page_title'	=> 'Resources Custom Field',
-	// 	'menu_title'	=> 'Resources Custom Field',
-	// 	'menu_slug' 	=> 'Resources Custom Field',
-	// 	'capability'	=> 'edit_posts',
-	// 	'redirect'		=> false,
-	// 	'parent_slug'    => 'edit.php?post_type=resources',
-	// ));
+	acf_add_options_page( array(
+		'page_title'	=> 'Release Notes Custom Field',
+		'menu_title'	=> 'Release Notes Custom Field',
+		'menu_slug' 	=> 'Release Notes Custom Field',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'parent_slug'    => 'edit.php?post_type=release-notes',
+	));
 
 	acf_add_options_page( array(
 		'page_title'	=> 'Insight Custom Field',
@@ -411,30 +409,30 @@ function my_acf_op_init() {
     }
 }
 
-//search 
-// function template_chooser( $template ){
-//     global $wp_query;   
-      
-//     if( $wp_query->is_search ){
-//         return locate_template('search.php');  
-//     }   
-//     return $template;   
-// }
-// add_filter( 'template_include', 'template_chooser' );
+function template_chooser( $template ){
+    global $wp_query;   
+    $post_type = get_query_var('post_type');   
+    if( $wp_query->is_search && $post_type == 'release-notes' ){
+        return locate_template('archive-release-notes-search.php');  //  redirect to archive-release-notes.php
+    }   
+    return $template;   
+}
+add_filter( 'template_include', 'template_chooser' );   
 
 //Pagination
-if ( ! function_exists( 'post_pagination' ) ) :
-	function post_pagination() {
-	  global $wp_query;
-	  $pager = 999999999; // need an unlikely integer
+// if ( ! function_exists( 'post_pagination' ) ) :
+// 	function post_pagination() {
+// 	  global $wp_query;
+// 	  $pager = 999999999; // need an unlikely integer
   
-		 echo paginate_links( array(
-			  'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
-			  'format' => '?paged=%#%',
-			  'current' => max( 1, get_query_var('paged') ),
-			  'total' => $wp_query->max_num_pages
-		 ) );
-	}
- endif;
+// 		 echo paginate_links( array(
+// 			  'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+// 			  'format' => '?paged=%#%',
+// 			  'current' => max( 1, get_query_var('paged') ),
+// 			  'total' => $wp_query->max_num_pages
+// 		 ) );
+// 	}
+//  endif;
+
 
 

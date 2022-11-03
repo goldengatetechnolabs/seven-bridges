@@ -38,9 +38,7 @@
 	<div class="container">
 		<div class="justify-content-lg-end">
 			<ul class="navbar-nav align-items-center justify-content-end flex-row">
-				<li class="nav-item"><a href="">Support</a></li>
-				<li class="px-3">|</li>
-				<li class="nav-item"><a href="">Login</a></li>
+				<?php if ( is_active_sidebar( 'header-menu' ) ) { dynamic_sidebar( 'header-menu' ); } ?>
 			</ul>
 		</div>
 	</div>
@@ -270,7 +268,7 @@
 					</li>
 				</ul>
 				<ul class="navbar-nav align-items-center">
-				<li class="nav-item ps-xxl-4"><a href="" class="btn btn1">Contact Us</a> </li>
+					<?php if ( is_active_sidebar( 'header-button' ) ) { dynamic_sidebar( 'header-button' ); } ?>
 				</ul>
 			</div>
 		</nav>

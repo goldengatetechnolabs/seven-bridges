@@ -6,9 +6,9 @@
 		<div class="row justify-content-between g-4">
 			<div class="col-md-6 wow fadeInUp" data-wow-delay=".3s">
 				<div class="section-title banner-title">
-					<h2 class="exbold text-white my-3">Insights</h2>
+					<h2 class="exbold text-white my-3"><?php echo get_field("insights_banner", "options")['title']; ?></h2>
 				</div>
-				<p class="">Strengthen your bioinformatics program with Seven Bridges case studies, industry research, and more.</p>
+				<p class=""><?php echo get_field("insights_banner", "options")['short_description']; ?></p>
 			</div>
 		</div>
 	</div>
@@ -43,60 +43,118 @@
 			<div class="col-md-4">
 				<div class="welcome-block">
 					<div class="section-title pb-md-2">
-						<h2 class="mb-2">Case Studies</h2>
-						<p>Learn how BioPharma, government and academia and diagnostic companies are advancing their research with Seven Bridges.</p>
+						<h2 class="mb-2"><?php echo get_field("case_studies_insights", "options")['title']; ?></h2>
+						<p><?php echo get_field("case_studies_insights", "options")['description']; ?></p>
 					</div>
-					<a href="" class="link">View All <i class="fas fa-long-arrow-right ms-2"></i></a>
+					<a href="<?php echo get_post_type_archive_link( 'case-studies' ); ?>" class="link">View All <i class="fas fa-long-arrow-right ms-2"></i></a>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t01.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent  siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+
+
+			<?php $the_query = new WP_Query( 
+			array('post_type' => 'case-studies',
+			'post_status' => 'publish',
+			'posts_per_page' => 2,
+			) );  ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
+				<div class="col-md-4">
+					<div class="testimonials-block">
+						<div class="testimonials-img"><img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid"></div>
+						<div class="testimonials-details">
+						<div class="section-title"><h4><?php echo the_title(); ?></h4></div>
+							<p><?php echo get_the_excerpt(); ?></p>
+							<a href="<?php the_permalink(); ?>" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t02.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
-					</div>
-				</div>
-			</div>
+			<?php endwhile; wp_reset_postdata(); ?>
 		</div>
 
 		<div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay=".1s">
 			<div class="col-md-4">
 				<div class="welcome-block">
 					<div class="section-title pb-md-2">
-						<h2 class="mb-2">Publications</h2>
-						<p>Read articles from our scientists, research done with our products and our recent conference presentations.</p>
+						<h2 class="mb-2"><?php echo get_field("publications_insights", "options")['title']; ?></h2>
+						<p><?php echo get_field("publications_insights", "options")['description']; ?></p>
 					</div>
-					<a href="" class="link">View All <i class="fas fa-long-arrow-right ms-2"></i></a>
+					<a href="<?php echo get_post_type_archive_link( 'publications' ); ?>" class="link">View All <i class="fas fa-long-arrow-right ms-2"></i></a>
 				</div>
 			</div>
+			<?php $the_query = new WP_Query( 
+			array('post_type' => 'publications',
+			'post_status' => 'publish',
+			'posts_per_page' => 2,
+			) );  ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
+				<div class="col-md-4">
+					<div class="testimonials-block">
+						<div class="testimonials-img"><img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid"></div>
+						<div class="testimonials-details">
+						<div class="section-title"><h4><?php echo the_title(); ?></h4></div>
+							<p><?php echo get_the_excerpt(); ?></p>
+							<a href="<?php the_permalink(); ?>" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; wp_reset_postdata(); ?>
+		</div>
+
+		<div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay=".1s">
 			<div class="col-md-4">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t01.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent  siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+				<div class="welcome-block">
+					<div class="section-title pb-md-2">
+						<h2 class="mb-2"><?php echo get_field("white_papers_insights", "options")['title']; ?></h2>
+						<p><?php echo get_field("white_papers_insights", "options")['description']; ?></p>
 					</div>
+					<a href="<?php echo get_post_type_archive_link( 'white-papers' ); ?>" class="link">View All <i class="fas fa-long-arrow-right ms-2"></i></a>
 				</div>
 			</div>
+			<?php $the_query = new WP_Query( 
+			array('post_type' => 'white-papers',
+			'post_status' => 'publish',
+			'posts_per_page' => 2,
+			) );  ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
+				<div class="col-md-4">
+					<div class="testimonials-block">
+						<div class="testimonials-img"><img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid"></div>
+						<div class="testimonials-details">
+						<div class="section-title"><h4><?php echo the_title(); ?></h4></div>
+							<p><?php echo get_the_excerpt(); ?></p>
+							<a href="<?php the_permalink(); ?>" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; wp_reset_postdata(); ?>
+		</div>
+
+		<div class="row g-4 justify-content-center wow fadeInUp" data-wow-delay=".1s">
 			<div class="col-md-4">
-				<div class="testimonials-block">
-					<div class="testimonials-img"><img src="images/testimonials/t02.png" class="img-fluid"></div>
-					<div class="testimonials-details">
-						<p>Lorem ipsum dolor sit ament undes siteri quorum des uni deser torem adent.</p>
-						<a href="" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+				<div class="welcome-block">
+					<div class="section-title pb-md-2">
+						<h2 class="mb-2"><?php echo get_field("blog_insights", "options")['title']; ?></h2>
+						<p><?php echo get_field("blog_insights", "options")['description']; ?></p>
 					</div>
+					<a href="<?php echo get_post_type_archive_link( 'blogs' ); ?>" class="link">View All <i class="fas fa-long-arrow-right ms-2"></i></a>
 				</div>
 			</div>
+			<?php $the_query = new WP_Query( 
+			array('post_type' => 'blogs',
+			'post_status' => 'publish',
+			'posts_per_page' => 2,
+			) );  ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
+				<div class="col-md-4">
+					<div class="testimonials-block">
+						<div class="testimonials-img"><img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-fluid"></div>
+						<div class="testimonials-details">
+						<div class="section-title"><h4><?php echo the_title(); ?></h4></div>
+							<p><?php echo get_the_excerpt(); ?></p>
+							<a href="<?php the_permalink(); ?>" class="link">Read More <i class="fas fa-long-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			<?php endwhile; wp_reset_postdata(); ?>
 		</div>
 	</div>
 </section>

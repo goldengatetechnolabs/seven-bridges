@@ -42,7 +42,7 @@
 
 		<nav aria-label="...">
 			<ul class="pagination justify-content-center">
-            <?php post_pagination(); ?>
+            <?php //post_pagination(); ?>
 				<li class="page-item">
 					<a class="page-link" href="#"><i class="fas fa-angle-left"></i></a>
 				</li>

@@ -70,7 +70,8 @@
 
 		<nav aria-label="...">
 			<ul class="pagination justify-content-center">
-				<li class="page-item">
+			<?php echo paginate_links(); ?>
+				<!-- <li class="page-item">
 					<a class="page-link" href="#"><i class="fas fa-angle-left"></i></a>
 				</li>
 				<li class="page-item active"  aria-current="page"><a class="page-link" href="#">1</a></li>
@@ -84,7 +85,7 @@
 				<li class="page-item"><a class="page-link" href="#">9</a></li>
 				<li class="page-item">
 					<a class="page-link" href="#"><i class="fas fa-angle-right"></i></a>
-				</li>
+				</li> -->
 			</ul>
 		</nav>
 	</div>

@@ -1,12 +1,12 @@
 <?php 
-// Register Resources Post Type
-function resources_post_type() {
+// Register White Papers Post Type
+function white_papers_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Resources', 'Post Type General Name', 'sevenBridges' ),
-		'singular_name'         => _x( 'Resources', 'Post Type Singular Name', 'sevenBridges' ),
-		'menu_name'             => __( 'Resources', 'sevenBridges' ),
-		'name_admin_bar'        => __( 'Resources', 'sevenBridges' ),
+		'name'                  => _x( 'White Papers', 'Post Type General Name', 'sevenBridges' ),
+		'singular_name'         => _x( 'White Paper', 'Post Type Singular Name', 'sevenBridges' ),
+		'menu_name'             => __( 'White Papers', 'sevenBridges' ),
+		'name_admin_bar'        => __( 'White Paper', 'sevenBridges' ),
 		'archives'              => __( 'Item Archives', 'sevenBridges' ),
 		'attributes'            => __( 'Item Attributes', 'sevenBridges' ),
 		'parent_item_colon'     => __( 'Parent Item:', 'sevenBridges' ),
@@ -32,16 +32,16 @@ function resources_post_type() {
 		'filter_items_list'     => __( 'Filter items list', 'sevenBridges' ),
 	);
 	$args = array(
-		'label'                 => __( 'Resources', 'sevenBridges' ),
-		'description'           => __( 'Resources Description', 'sevenBridges' ),
+		'label'                 => __( 'White Papers', 'sevenBridges' ),
+		'description'           => __( 'White Papers Description', 'sevenBridges' ),
 		'labels'                => $labels,
 		'supports' => array('title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'author', 'comments', 'trackbacks', 'page-attributes', 'post-formats', 'custom-fields'),
-		'taxonomies'            => array( 'resource', ),
+		'taxonomies'            => array( ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_icon'   			=> 'dashicons-image-filter',
+		'menu_icon'   			=> 'dashicons-welcome-write-blog',
 		'menu_position'         => 3,
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
@@ -51,7 +51,7 @@ function resources_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'resources', $args );
+	register_post_type( 'white-papers', $args );
 
 }
-add_action( 'init', 'resources_post_type', 0 );
+add_action( 'init', 'white_papers_post_type', 0 );
