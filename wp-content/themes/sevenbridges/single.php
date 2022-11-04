@@ -16,7 +16,7 @@
 
 <section class="testimonials-area pb-5 clearfix">
 	<div class="container pb-md-4">
-        <div class="row" style="padding-left: 150px; padding-right: 150px;">
+        <div class="row">
             <div class="col-lg-12 col-md-12 mb-4">
                 <?php echo the_content(); ?>
             </div>

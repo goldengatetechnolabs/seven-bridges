@@ -16,7 +16,7 @@
 <section class="testimonials-area pb-5 clearfix">
 	<div class="container pb-md-4">
     <a href="<?php echo get_post_type_archive_link( 'blogs' ); ?>" class="text-danger mb-2"><i class="fas fa-long-arrow-left px-2"></i><b>Back to all blog posts</b></a>
-        <h1 class="py-2" style="color: #174C75;"><b><?php single_term_title( ); ?></b></h1>
+        <h1 class="py-2"><b><?php single_term_title( ); ?></b></h1>
 		<div class="row g-4 mb-5 wow fadeInUp animated" data-wow-delay=".1s">
 		<?php while ( have_posts() ) : the_post();?>
         <?php $terms = get_the_terms( get_the_ID(), 'blog' ); ?> 

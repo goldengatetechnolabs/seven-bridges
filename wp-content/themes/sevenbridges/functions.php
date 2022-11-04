@@ -274,21 +274,32 @@ function sevenBridges_widgets_init()
                         'id'   => 'mega-menu-item-col-1' . $item->ID,
                         'description' => 'Mega Menu items',
                         'name' => $item->title . ' - Mega Menu Column 1',
-                         
+                        'before_widget' => '<div class="m-4">',
+                        'after_widget' => '</div>', 
 						
                     ));
                     register_sidebar( array(
                         'id'   => 'mega-menu-item-col-2' . $item->ID,
                         'description' => 'Mega Menu items',
                         'name' => $item->title . ' - Mega Menu Column 2',
-						
+                        'before_widget' => '<div class="m-4">',
+                        'after_widget' => '</div>', 
 						
                     ));
                     register_sidebar( array(
                         'id'   => 'mega-menu-item-col-3' . $item->ID,
                         'description' => 'Mega Menu items',
                         'name' => $item->title . ' - Mega Menu Column 3',
-						 
+                        'before_widget' => '<div class="m-4">',
+                        'after_widget' => '</div>', 
+						
+                    ));
+                    register_sidebar( array(
+                        'id'   => 'mega-menu-item-col-4' . $item->ID,
+                        'description' => 'Mega Menu items',
+                        'name' => $item->title . ' - Mega Menu Column 4',
+                        'before_widget' => '<div class="m-4">',
+                        'after_widget' => '</div>', 
 						
                     ));
                 }

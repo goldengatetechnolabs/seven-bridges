@@ -53,7 +53,7 @@ get_header(); ?>
         <div class="container py-md-4">
             <div class="welcome-block  col-md-8 mx-auto  wow fadeInUp" data-wow-delay=".1s">
                 <div class="section-title pb-md-4">
-                    <h2 class="mb-4"  style="font-size: 20px;"><?php echo get_sub_field('title'); ?></h2>
+                    <h2 class="mb-4"><?php echo get_sub_field('title'); ?></h2>
                 </div>
             </div>
             <div class="row g-3 gx-md-4 gy-md-5 wow fadeInUp" data-wow-delay=".1s">

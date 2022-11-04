@@ -22,7 +22,7 @@
                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" width="100%" height="70%">
             </div>
         </div>
-        <div class="row" style="padding-left: 150px; padding-right: 150px;">
+        <div class="row">
             <div class="col-lg-12 col-md-12 mb-4">
            <?php $terms = get_the_terms( get_the_ID(), 'blog' ); ?>
                 <?php 
@@ -40,7 +40,7 @@
 
 <section class="testimonials-area pb-5 clearfix">
 	<div class="container pb-md-4">
-        <h1 class="py-4" style="text-align: center;color: #174C75;"><b>Related Blog Posts</b></h1>
+        <h1 class="py-4"><b>Related Blog Posts</b></h1>
 		<div class="row g-4 mb-5 wow fadeInUp animated" data-wow-delay=".1s">
         <?php 
         $customTaxonomyTerms = wp_get_object_terms( $post->ID, 'blog', array('fields' => 'ids') ); 

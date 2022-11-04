@@ -38,7 +38,7 @@
 </section>
 
 <section  class="clearfix">
-	<div class="container py-md-4"style="text-align: end; text-align: center; color: crimson; font-weight: 500;">
+	<div class="container py-md-4">
         <h5>
             <?php 
                 $terms = get_terms( array(

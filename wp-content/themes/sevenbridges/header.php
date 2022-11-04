@@ -61,16 +61,16 @@
 
 			<div class="main-menu navbar-collapse collapse  align-items-center justify-content-lg-end" id="navbarNavDropdown">
 			<?php
-				// wp_nav_menu(array(
-				// 	'theme_location' => 'mega_menu',
-				// 	'depth' => 2,
-				// 	'container' => "",
-				// 	"container_class" => "",
-				// 	'menu_class'  => 'navbar-nav align-items-center',
-				// 	'walker'  => new WP_Bootstrap_Mega_Navwalker()
-				// ));
+				wp_nav_menu(array(
+					'theme_location' => 'mega_menu',
+					'depth' => 2,
+					'container' => "",
+					"container_class" => "",
+					'menu_class'  => 'navbar-nav align-items-center',
+					'walker'  => new WP_Bootstrap_Mega_Navwalker()
+				));
 			?>
-				<ul class="navbar-nav align-items-center">
+				<!-- <ul class="navbar-nav align-items-center">
 					<li class="nav-item dropdown mega-drop"> 
 						<a href="#" class="nav-link dropdown-toggle" role="button" id="d1" data-bs-toggle="dropdown" aria-expanded="false">Platform</a> 
 						<div class="dropdown-menu mega-menu" aria-labelledby="d1">
@@ -266,7 +266,7 @@
                 			</ul>
 	                    </div>
 					</li>
-				</ul>
+				</ul> -->
 				<ul class="navbar-nav align-items-center">
 					<?php if ( is_active_sidebar( 'header-button' ) ) { dynamic_sidebar( 'header-button' ); } ?>
 				</ul>
